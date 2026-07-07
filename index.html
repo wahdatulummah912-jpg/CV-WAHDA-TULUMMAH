@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CV Profesional - Wahda Tulummah, S.Kom | Fresh Graduate Teknik Komputer">
+    <title>CV - Wahda Tulummah, S.Kom</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* ========== CSS RESET & BASE ========== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy-dark: #0B1D3A;
+            --navy-primary: #132B50;
+            --navy-medium: #1A3A6B;
+            --navy-light: #2A4F8A;
+            --navy-accent: #3B6CB5;
+            --white: #FFFFFF;
+            --off-white: #F8F9FC;
+            --light-gray: #E8ECF2;
+            --muted-gray: #C5CDD9;
+            --silver-blue: #97A5B8;
+            --text-dark: #1A1F2E;
+            --text-medium: #4A5568;
+            --text-light: #718096;
+            --gold-accent: #C8A96E;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        body {
+            font-family: 'Inter', 'Poppins', sans-serif;
+            background: #D0D5DD;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 20px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ========== A4 PAGE CONTAINER ========== */
+        .cv-page {
+            width: 210mm;
+            min-height: 297mm;
+            max-height: 297mm;
+            background: var(--white);
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            overflow: hidden;
+            box-shadow: 0 25px 80px rgba(11, 29, 58, 0.15),
+                        0 8px 30px rgba(11, 29, 58, 0.08);
+            position: relative;
+        }
+
+        /* ========== LEFT SIDEBAR ========== */
+        .sidebar {
+            background: linear-gradient(180deg, var(--navy-dark) 0%, var(--navy-primary) 40%, var(--navy-medium) 100%);
+            color: var(--white);
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sidebar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(ellipse at 20% 20%, rgba(59, 108, 181, 0.08) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 80%, rgba(42, 79, 138, 0.06) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        /* -- Photo Section -- */
+        .photo-section {
+            padding: 28px 24px 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .photo-frame {
+            width: 160px;
+            height: 195px;
+            margin: 0 auto 18px;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3),
+                        0 2px 8px rgba(0, 0, 0, 0.15);
+            position: relative;
+        }
+
+        .photo-frame::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            pointer-events: none;
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            display: block;
+        }
+
+        .sidebar-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.65rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            line-height: 1.25;
+            color: var(--white);
+            margin-bottom: 4px;
+        }
+
+        .sidebar-title {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.0rem;
+            font-weight: 400;
+            color: var(--muted-gray);
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            margin-bottom: 0;
+            line-height: 1.4;
+        }
+
+        .sidebar-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+            margin: 16px 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* -- Sidebar Sections -- */
+        .sidebar-section {
+            padding: 10px 22px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .sidebar-section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--white);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sidebar-section-title .icon {
+            width: 16px;
+            height: 16px;
+            opacity: 0.7;
+            flex-shrink: 0;
+        }
+
+        .sidebar-section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* -- Contact Items -- */
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.45;
+        }
+
+        .contact-item .contact-icon {
+            width: 15px;
+            height: 15px;
+            margin-top: 2px;
+            flex-shrink: 0;
+            opacity: 0.6;
+        }
+
+        .contact-item span {
+            word-break: break-word;
+        }
+
+        /* -- Skills -- */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            padding: 4px 11px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 20px;
+            font-size: 1.0rem;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 400;
+            letter-spacing: 0.2px;
+            transition: background 0.2s;
+        }
+
+        /* ========== MAIN CONTENT (RIGHT) ========== */
+        .main-content {
+            padding: 30px 32px 24px 28px;
+            background: var(--white);
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        /* -- Main Header -- */
+        .main-header {
+            margin-bottom: 18px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid var(--navy-dark);
+            position: relative;
+        }
+
+        .main-header::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background: var(--navy-accent);
+        }
+
+        .main-name {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.6rem;
+            font-weight: 800;
+            color: var(--navy-dark);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            line-height: 1.15;
+            margin-bottom: 4px;
+        }
+
+        .main-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: var(--navy-accent);
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+        }
+
+        /* -- Section Styles -- */
+        .section {
+            margin-bottom: 16px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .section-icon {
+            width: 20px;
+            height: 20px;
+            color: var(--navy-primary);
+            flex-shrink: 0;
+        }
+
+        .section-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--navy-dark);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-line {
+            flex: 1;
+            height: 1.5px;
+            background: linear-gradient(90deg, var(--light-gray), transparent);
+        }
+
+        /* -- Profile Text -- */
+        .profile-text {
+            font-size: 1.08rem;
+            color: var(--text-medium);
+            line-height: 1.65;
+            text-align: justify;
+            hyphens: auto;
+        }
+
+        /* -- Education & Experience Items -- */
+        .timeline-item {
+            position: relative;
+            padding-left: 16px;
+            margin-bottom: 14px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 6px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--navy-accent);
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 2.5px;
+            top: 14px;
+            bottom: -6px;
+            width: 1px;
+            background: var(--light-gray);
+        }
+
+        .timeline-item:last-child::after {
+            display: none;
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-bottom: 2px;
+        }
+
+        .timeline-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.12rem;
+            font-weight: 600;
+            color: var(--navy-dark);
+            line-height: 1.3;
+        }
+
+        .timeline-date {
+            font-size: 0.95rem;
+            color: var(--silver-blue);
+            font-weight: 500;
+            white-space: nowrap;
+            letter-spacing: 0.3px;
+        }
+
+        .timeline-subtitle {
+            font-size: 1.05rem;
+            color: var(--navy-medium);
+            font-weight: 500;
+            margin-bottom: 2px;
+        }
+
+        .timeline-detail {
+            font-size: 1.0rem;
+            color: var(--text-light);
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .timeline-desc {
+            list-style: none;
+            padding: 0;
+            margin: 4px 0 0 0;
+        }
+
+        .timeline-desc li {
+            font-size: 1.0rem;
+            color: var(--text-medium);
+            line-height: 1.5;
+            padding-left: 14px;
+            position: relative;
+            margin-bottom: 3px;
+        }
+
+        .timeline-desc li::before {
+            content: '–';
+            position: absolute;
+            left: 0;
+            color: var(--navy-accent);
+            font-weight: 600;
+        }
+
+        /* -- Projects -- */
+        .project-item {
+            padding: 8px 12px;
+            background: var(--off-white);
+            border-left: 3px solid var(--navy-accent);
+            border-radius: 0 6px 6px 0;
+            margin-bottom: 8px;
+        }
+
+        .project-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--navy-dark);
+            margin-bottom: 2px;
+        }
+
+        .project-desc {
+            font-size: 0.98rem;
+            color: var(--text-medium);
+            line-height: 1.45;
+        }
+
+        /* ========== PRINT STYLES ========== */
+        @media print {
+            html { font-size: 10px; }
+            body {
+                background: white;
+                padding: 0;
+                margin: 0;
+            }
+            .cv-page {
+                box-shadow: none;
+                width: 210mm;
+                min-height: 297mm;
+                max-height: 297mm;
+            }
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media screen and (max-width: 900px) {
+            .cv-page {
+                width: 100%;
+                min-height: auto;
+                max-height: none;
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                order: -1;
+            }
+            body {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="cv-page">
+    <!-- ========== LEFT SIDEBAR ========== -->
+    <aside class="sidebar">
+        <!-- Photo Section -->
+        <div class="photo-section">
+            <div class="photo-frame">
+                <img src="photo.png" alt="Wahda Tulummah, S.Kom - Professional Photo" id="profile-photo">
+            </div>
+            <h1 class="sidebar-name">Wahda Tulummah</h1>
+            <p class="sidebar-title">S.Kom</p>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <!-- Contact Section -->
+        <div class="sidebar-section">
+            <h2 class="sidebar-section-title">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Kontak
+            </h2>
+
+            <div class="contact-item">
+                <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <span>Kota Makassar,<br>Sulawesi Selatan</span>
+            </div>
+
+            <div class="contact-item">
+                <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>+6285343789495</span>
+            </div>
+
+            <div class="contact-item">
+                <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <span>wahdatulummah912<wbr>@gmail.com</span>
+            </div>
+        </div>
+
+        <div class="sidebar-divider"></div>
+
+        <!-- Skills Section -->
+        <div class="sidebar-section">
+            <h2 class="sidebar-section-title">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                Kemampuan
+            </h2>
+            <div class="skills-grid">
+                <span class="skill-tag">HTML</span>
+                <span class="skill-tag">CSS</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">Git & GitHub</span>
+                <span class="skill-tag">UI / UX Dasar</span>
+                <span class="skill-tag">Konfigurasi IP</span>
+                <span class="skill-tag">Microsoft Office</span>
+                <span class="skill-tag">Canva</span>
+                <span class="skill-tag">AI Tools / ML</span>
+            </div>
+        </div>
+    </aside>
+
+    <!-- ========== MAIN CONTENT (RIGHT) ========== -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="main-header">
+            <h1 class="main-name">Wahda Tulummah, S.Kom</h1>
+            <p class="main-subtitle">Fresh Graduate — Teknik Komputer</p>
+        </header>
+
+        <!-- Profile -->
+        <section class="section" id="profil">
+            <div class="section-header">
+                <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                <span class="section-title">Profil</span>
+                <span class="section-line"></span>
+            </div>
+            <p class="profile-text">
+                Lulusan S1 Teknik Komputer Universitas Negeri Makassar dengan pemahaman dalam Software Development, Web Development, Database Management, System Analysis, dan Artificial Intelligence. Memiliki pengalaman mengerjakan proyek akademik menggunakan berbagai bahasa pemrograman dan teknologi modern. Mampu berpikir analitis, memiliki kemampuan problem solving yang baik, cepat mempelajari teknologi baru, serta mampu bekerja secara individu maupun kolaboratif. Siap berkontribusi sebagai profesional di bidang Teknologi Informasi dan terus mengembangkan kompetensi sesuai kebutuhan industri.
+            </p>
+        </section>
+
+        <!-- Education -->
+        <section class="section" id="pendidikan">
+            <div class="section-header">
+                <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1 4 3 6 3s6-2 6-3v-5"/></svg>
+                <span class="section-title">Pendidikan</span>
+                <span class="section-line"></span>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span class="timeline-title">Universitas Negeri Makassar</span>
+                    <span class="timeline-date">Ags 2022 – Jun 2026</span>
+                </div>
+                <div class="timeline-subtitle">S1 Teknik Komputer</div>
+                <div class="timeline-detail">IPK 3.82 / 4.00 · Predikat: Cumlaude</div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="section" id="pengalaman">
+            <div class="section-header">
+                <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                <span class="section-title">Pengalaman Magang</span>
+                <span class="section-line"></span>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span class="timeline-title">Dinas Kominfo & Persandian</span>
+                    <span class="timeline-date">Des 2024 – Feb 2025</span>
+                </div>
+                <div class="timeline-subtitle">Kab. Bulukumba</div>
+                <ul class="timeline-desc">
+                    <li>Berpartisipasi dalam pengembangan website sebagai bagian dari tim</li>
+                    <li>Membantu proses perancangan, pembuatan, dan pengujian website sesuai kebutuhan instansi</li>
+                    <li>Memperoleh pengalaman dalam pengembangan aplikasi berbasis web serta kerja sama tim</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span class="timeline-title">Diskominfo – SP</span>
+                    <span class="timeline-date">Feb 2025 – Jun 2025</span>
+                </div>
+                <div class="timeline-subtitle">Provinsi Sulawesi Selatan</div>
+                <ul class="timeline-desc">
+                    <li>Membantu proses pengelolaan dan pengarsipan data agar tersusun rapi dan mudah diakses</li>
+                    <li>Beradaptasi dengan lingkungan kerja profesional serta meningkatkan kemampuan komunikasi dan kerja sama tim</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="section" id="proyek">
+            <div class="section-header">
+                <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                <span class="section-title">Proyek</span>
+                <span class="section-line"></span>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">Web Dinas Kominfo Kab. Bulukumba</div>
+                <div class="project-desc">Membuat website sistem pelaporan NON-ASN untuk kebutuhan instansi pemerintah daerah.</div>
+            </div>
+            <div class="project-item">
+                <div class="project-title">Konfigurasi IP WI-FI</div>
+                <div class="project-desc">Konfigurasi IP WI-FI Dinas Kominfo Kab. Bulukumba untuk optimalisasi jaringan internal.</div>
+            </div>
+        </section>
+    </main>
+</div>
+
+</body>
+</html>
