@@ -51,13 +51,10 @@
 
         /* ========== A4 PAGE CONTAINER ========== */
         .cv-page {
-            width: 210mm;
-            min-height: 297mm;
-            max-height: 297mm;
+            width: 180mm;
             background: var(--white);
             display: grid;
-            grid-template-columns: 240px 1fr;
-            overflow: hidden;
+            grid-template-columns: 230px 1fr;
             box-shadow: 0 25px 80px rgba(11, 29, 58, 0.15),
                         0 8px 30px rgba(11, 29, 58, 0.08);
             position: relative;
@@ -89,16 +86,16 @@
 
         /* -- Photo Section -- */
         .photo-section {
-            padding: 28px 24px 20px;
+            padding: 22px 20px 14px;
             text-align: center;
             position: relative;
             z-index: 1;
         }
 
         .photo-frame {
-            width: 160px;
-            height: 195px;
-            margin: 0 auto 18px;
+            width: 150px;
+            height: 180px;
+            margin: 0 auto 14px;
             border-radius: 14px;
             overflow: hidden;
             border: 3px solid rgba(255, 255, 255, 0.2);
@@ -148,14 +145,14 @@
         .sidebar-divider {
             height: 1px;
             background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
-            margin: 16px 20px;
+            margin: 10px 20px;
             position: relative;
             z-index: 1;
         }
 
         /* -- Sidebar Sections -- */
         .sidebar-section {
-            padding: 10px 22px;
+            padding: 6px 20px;
             position: relative;
             z-index: 1;
         }
@@ -167,7 +164,7 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             color: var(--white);
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -192,7 +189,7 @@
             display: flex;
             align-items: flex-start;
             gap: 10px;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             font-size: 1.05rem;
             color: rgba(255, 255, 255, 0.85);
             line-height: 1.45;
@@ -232,7 +229,7 @@
 
         /* ========== MAIN CONTENT (RIGHT) ========== */
         .main-content {
-            padding: 30px 32px 24px 28px;
+            padding: 22px 28px 18px 24px;
             background: var(--white);
             display: flex;
             flex-direction: column;
@@ -241,8 +238,8 @@
 
         /* -- Main Header -- */
         .main-header {
-            margin-bottom: 18px;
-            padding-bottom: 16px;
+            margin-bottom: 14px;
+            padding-bottom: 12px;
             border-bottom: 2px solid var(--navy-dark);
             position: relative;
         }
@@ -259,13 +256,13 @@
 
         .main-name {
             font-family: 'Poppins', sans-serif;
-            font-size: 2.6rem;
+            font-size: 2.4rem;
             font-weight: 800;
             color: var(--navy-dark);
             letter-spacing: 1.5px;
             text-transform: uppercase;
             line-height: 1.15;
-            margin-bottom: 4px;
+            margin-bottom: 3px;
         }
 
         .main-subtitle {
@@ -279,14 +276,14 @@
 
         /* -- Section Styles -- */
         .section {
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
 
         .section-header {
             display: flex;
             align-items: center;
-            gap: 10px;
-            margin-bottom: 10px;
+            gap: 8px;
+            margin-bottom: 8px;
         }
 
         .section-icon {
@@ -313,9 +310,9 @@
 
         /* -- Profile Text -- */
         .profile-text {
-            font-size: 1.08rem;
+            font-size: 1.05rem;
             color: var(--text-medium);
-            line-height: 1.65;
+            line-height: 1.55;
             text-align: justify;
             hyphens: auto;
         }
@@ -324,7 +321,7 @@
         .timeline-item {
             position: relative;
             padding-left: 16px;
-            margin-bottom: 14px;
+            margin-bottom: 10px;
         }
 
         .timeline-item::before {
@@ -398,12 +395,12 @@
         }
 
         .timeline-desc li {
-            font-size: 1.0rem;
+            font-size: 0.98rem;
             color: var(--text-medium);
-            line-height: 1.5;
+            line-height: 1.45;
             padding-left: 14px;
             position: relative;
-            margin-bottom: 3px;
+            margin-bottom: 2px;
         }
 
         .timeline-desc li::before {
@@ -416,11 +413,11 @@
 
         /* -- Projects -- */
         .project-item {
-            padding: 8px 12px;
+            padding: 6px 12px;
             background: var(--off-white);
             border-left: 3px solid var(--navy-accent);
             border-radius: 0 6px 6px 0;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .project-title {
@@ -447,9 +444,7 @@
             }
             .cv-page {
                 box-shadow: none;
-                width: 210mm;
-                min-height: 297mm;
-                max-height: 297mm;
+                width: 180mm;
             }
         }
 
