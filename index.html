@@ -436,15 +436,33 @@
 
         /* ========== PRINT STYLES ========== */
         @media print {
-            html { font-size: 10px; }
-            body {
-                background: white;
-                padding: 0;
+            @page {
+                size: A4;
                 margin: 0;
             }
+            html, body {
+                width: 210mm;
+                height: 296mm; /* Sedikit di bawah 297mm untuk mencegah tumpah ke halaman 2 */
+                max-height: 296mm;
+                margin: 0;
+                padding: 0;
+                background: white;
+                display: block;
+                overflow: hidden !important;
+            }
             .cv-page {
+                width: 210mm;
+                height: 296mm;
+                max-height: 296mm;
                 box-shadow: none;
-                width: 180mm;
+                margin: 0;
+                padding: 0;
+                overflow: hidden !important;
+                page-break-after: avoid;
+                page-break-inside: avoid;
+            }
+            body > *:not(.cv-page) {
+                display: none;
             }
         }
 
@@ -568,7 +586,7 @@
         <section class="section" id="pengalaman">
             <div class="section-header">
                 <svg class="section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-                <span class="section-title">Pengalaman Magang</span>
+                <span class="section-title">Pengalaman Kerja</span>
                 <span class="section-line"></span>
             </div>
 
@@ -577,7 +595,7 @@
                     <span class="timeline-title">Dinas Kominfo & Persandian</span>
                     <span class="timeline-date">Des 2024 – Feb 2025</span>
                 </div>
-                <div class="timeline-subtitle">Kab. Bulukumba</div>
+                <div class="timeline-subtitle">Magang · Kab. Bulukumba</div>
                 <ul class="timeline-desc">
                     <li>Berpartisipasi dalam pengembangan website sebagai bagian dari tim</li>
                     <li>Membantu proses perancangan, pembuatan, dan pengujian website sesuai kebutuhan instansi</li>
@@ -590,10 +608,69 @@
                     <span class="timeline-title">Diskominfo – SP</span>
                     <span class="timeline-date">Feb 2025 – Jun 2025</span>
                 </div>
-                <div class="timeline-subtitle">Provinsi Sulawesi Selatan</div>
+                <div class="timeline-subtitle">Magang · Provinsi Sulawesi Selatan</div>
                 <ul class="timeline-desc">
                     <li>Membantu proses pengelolaan dan pengarsipan data agar tersusun rapi dan mudah diakses</li>
                     <li>Beradaptasi dengan lingkungan kerja profesional serta meningkatkan kemampuan komunikasi dan kerja sama tim</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span class="timeline-title">Volunteer – Pendidikan HIMATIK FT-UNM</span>
+                </div>
+                <div class="timeline-subtitle">Dusun Matteko, Kec. Tombolo Pao, Kab. Gowa, Sulawesi Selatan</div>
+                <ul class="timeline-desc">
+                    <li>Membantu pelaksanaan kegiatan pendidikan dan pengabdian masyarakat yang berlangsung selama 5 hari sebagai bagian dari program kerja HIMATIK FT-UNM</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span class="timeline-title">Koordinator Kesekretariatan – Ice Fest HIMATIK FT-UNM</span>
+                </div>
+                <ul class="timeline-desc">
+                    <li>Mengoordinasikan seluruh administrasi kepanitiaan sebelum, selama, dan setelah kegiatan berlangsung</li>
+                    <li>Menyusun dan mengelola surat-menyurat, proposal, notulen rapat, serta dokumen administrasi kegiatan</li>
+                    <li>Berkoordinasi dengan seluruh divisi untuk memastikan kelengkapan dokumen dan kelancaran komunikasi</li>
+                    <li>Mengarsipkan dokumen kegiatan secara sistematis sebagai bagian dari pelaporan dan evaluasi program kerja</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span class="timeline-title">Koordinator Acara – Olimpiade IT HIMATIK FT-UNM</span>
+                </div>
+                <ul class="timeline-desc">
+                    <li>Mengoordinasikan perencanaan dan pelaksanaan kegiatan Olimpiade IT sebagai bagian dari program kerja HIMATIK FT-UNM</li>
+                    <li>Menyusun jadwal kegiatan, membagi tugas kepanitiaan, serta memastikan setiap rangkaian acara berjalan sesuai rencana</li>
+                    <li>Berkoordinasi dengan seluruh divisi dan peserta untuk mendukung kelancaran pelaksanaan kegiatan</li>
+                    <li>Melakukan pemantauan pelaksanaan acara serta berkontribusi dalam evaluasi pasca-kegiatan</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span class="timeline-title">Volunteer – IT HIMATIK FT-UNM</span>
+                </div>
+                <div class="timeline-subtitle">Desa Sukamaju, Kec. Tellu Limpoe, Kab. Sinjai</div>
+                <ul class="timeline-desc">
+                    <li>Berpartisipasi sebagai IT Volunteer selama 5 hari memberikan edukasi literasi digital, keamanan siber, perlindungan data pribadi, serta bahaya perjudian online ilegal dan penipuan digital kepada masyarakat</li>
+                    <li>Mendukung persiapan dan pelaksanaan program sosialisasi bersama tim volunteer</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span class="timeline-title">Koordinator Volunteer – IT HIMATIK FT-UNM</span>
+                </div>
+                <ul class="timeline-desc">
+                    <li>Memimpin dan mengoordinasikan tim IT Volunteer dalam pelaksanaan program sosialisasi literasi digital kepada masyarakat</li>
+                    <li>Menyusun dan mengembangkan materi edukasi mengenai Artificial Intelligence (AI), keamanan digital, serta bahaya perjudian online ilegal dan penipuan digital</li>
+                    <li>Menyampaikan materi sosialisasi kepada masyarakat mengenai penggunaan teknologi yang aman, bertanggung jawab, dan produktif</li>
+                    <li>Memberikan pelatihan kepada guru mengenai pengoperasian Chromebook termasuk fitur dasar, pengelolaan akun, serta pemanfaatan perangkat untuk pembelajaran</li>
+                    <li>Mendampingi guru dalam praktik penggunaan Chromebook serta memberikan solusi terhadap kendala teknis selama pelatihan</li>
+                    <li>Berkoordinasi dengan panitia dan pemangku kepentingan setempat untuk memastikan seluruh rangkaian kegiatan berjalan lancar dan efektif</li>
                 </ul>
             </div>
         </section>
